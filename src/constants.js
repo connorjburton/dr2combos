@@ -66,7 +66,7 @@ export default {
         'Toy Spitball Gun',
         'Training Sword',
         'Vacuum Cleaner',
-        'Watergun',
+        'Water Gun',
         'Wheelchair',
         'Whiskey',
     ],
