@@ -14,8 +14,6 @@ describe('Items', () => {
 			return aggregate;
 		}, []);
 
-		console.log(uniqueComboItems.sort());
-
 		expect(Constants.ITEMS.sort()).toEqual(uniqueComboItems.sort());
 	});
 });
