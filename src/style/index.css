@@ -1,14 +1,7 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	padding: 0;
-	margin: 0;
 	background: #202020;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #FFF;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -40,6 +33,22 @@ li {
 }
 
 .card-images {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 348px 348px 348px 348px;
+	column-gap: 10px;
+	row-gap: 10px;
+}
+
+.card-images .image {
+	width: 348px;
+	height: 492px;
+}
+
+.card-images .image img {
+	width: 100%;
+	height: 100%;
+}
+
+.search {
+	margin-bottom: 10px;
 }
