@@ -33,6 +33,7 @@ class Items extends Component {
             <aside className={'items'}>
                 <div className={'search'}>
                     <input type="text" placeholder="Search items" value={this.state.filter} onKeyUp={event => this.setState({ filter: event.target.value.toLowerCase() })} />
+                    <button onClick={() => this.setState({ filter: '' })}>Clear</button>
                 </div>
                 <div className={'results'}>
                     <ul>
