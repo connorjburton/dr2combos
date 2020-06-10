@@ -1,5 +1,3 @@
-import { Component } from 'preact';
-
 const Cards = (props) => {
     const items = props.selected.length > 0 ? props.data.filter(card => card.weapons.some(weapon => props.selected.includes(weapon))) : props.data; 
 

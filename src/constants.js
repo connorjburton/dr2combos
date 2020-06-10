@@ -76,7 +76,7 @@ export default {
         { name: 'Flaming Gloves', image: 'flamingloves.jpg', weapons: ['Boxing Gloves', 'Motor Oil'] },
         { name: 'Heliblade', image: 'heliblade.jpg', weapons: ['Machete', 'Toy Helicopter'] },
         { name: 'Fire Spitter', image: 'firespitter.jpg', weapons: ['Toy Spitball Gun', 'Tiki Torch'] },
-        { name: 'Beer Hat', image: 'beerhat.jpg', image: 'beerhat.jpg', weapons: ['Beer', 'Construction Hat'] },
+        { name: 'Beer Hat', image: 'beerhat.jpg', weapons: ['Beer', 'Construction Hat'] },
         { name: 'Sticky Bomb', image: 'stickybomb.jpg', weapons: ['Lawn Dart', 'Dynamite'] },
         { name: 'Driller', image: 'driller.jpg', weapons: ['Power Drill', 'Spear'] },
         { name: 'Defiler', image: 'defiler.jpg', weapons: ['Fire Axe', 'Sledge Hammer'] },
