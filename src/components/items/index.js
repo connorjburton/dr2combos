@@ -11,6 +11,7 @@ class Items extends Component {
 
         this.filterItems = this.filterItems.bind(this);
         this.renderItem = this.renderItem.bind(this);
+        this.clearSelectedItems = this.clearSelectedItems.bind(this);
     }
 
     filterItems(item) {
@@ -28,12 +29,17 @@ class Items extends Component {
         );
     }
 
+    clearSelectedItems() {
+        this.setState({ filter: '' });
+        this.props.clear();
+    }
+
 	render() {
 		return (
             <aside className={'items'}>
                 <div className={'search'}>
                     <input type="text" placeholder="Search items" value={this.state.filter} onKeyUp={event => this.setState({ filter: event.target.value.toLowerCase() })} />
-                    <button onClick={() => this.setState({ filter: '' })}>Clear</button>
+                    <button onClick={() => this.clearSelectedItems()}>Clear</button>
                 </div>
                 <div className={'results'}>
                     <ul>

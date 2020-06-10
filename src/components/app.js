@@ -20,6 +20,11 @@ export default class App extends Component {
 
 		this.toggleItem = this.toggleItem.bind(this);
 		this.toggleItemsOnCard = this.toggleItemsOnCard.bind(this);
+		this.clearSelectedItems = this.clearSelectedItems.bind(this);
+	}
+
+	clearSelectedItems() {
+		this.setState({ selected: [] });
 	}
 
 	toggleItem(item) {
