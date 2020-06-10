@@ -21,7 +21,7 @@ class Cards extends Component {
         return cardList.sort((a, b) => a.name < b.name ? -1 : 1).map(card => {
             return (
                 <div className={'image'} onClick={() => this.onClickToggleCard(card.items)}>
-                    <img src={`../../assets/cards/${card.image}`} />
+                    <img src={`../../assets/cards/${card.image}`} title={card.name} />
                 </div>
             );
         })
