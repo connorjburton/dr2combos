@@ -1,4 +1,5 @@
 import { Component } from 'preact';
+import orderBy from 'lodash.orderby';
 
 class Items extends Component {
     constructor(props) {
@@ -16,6 +17,10 @@ class Items extends Component {
         return item.toLowerCase().startsWith(this.state.filter);
     }
 
+    sortItems(items) {
+        return orderBy(items, (item) => this.props.selected.includes(item), ['desc']);
+    }
+
     renderItem(item) {
         const selected = this.props.selected.includes(item);
         return (
@@ -31,7 +36,7 @@ class Items extends Component {
                 </div>
                 <div className={'results'}>
                     <ul>
-                        {this.props.data.filter(this.filterItems).map(this.renderItem)}
+                        {this.sortItems(this.props.data.filter(this.filterItems)).map(this.renderItem)}
                     </ul>
                 </div>
             </aside>
