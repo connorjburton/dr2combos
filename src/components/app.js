@@ -19,6 +19,7 @@ export default class App extends Component {
 		};
 
 		this.toggleItem = this.toggleItem.bind(this);
+		this.toggleItemsOnCard = this.toggleItemsOnCard.bind(this);
 	}
 
 	toggleItem(item) {
@@ -34,13 +35,18 @@ export default class App extends Component {
 		})
 	}
 
+	toggleItemsOnCard(cardItems) {
+		const selectedCardItems = this.state.selected.filter((selectedItem) => cardItems.includes(selectedItem));
+		selectedCardItems.length > 0 ? selectedCardItems.forEach(this.toggleItem) : cardItems.forEach(this.toggleItem);
+	}
+
 	render() {
 		return (
-			<div id="app">
+			<div id="app" className="">
 				<Header />
 				<div className={'wrapper'}>
 					<Items data={this.state.config.items} toggle={this.toggleItem} selected={this.state.selected} />
-					<Cards data={this.state.config.combos} selected={this.state.selected} />
+					<Cards data={this.state.config.combos} toggleCard={this.toggleItemsOnCard} selected={this.state.selected} />
 				</div>
 			</div>
 		);
