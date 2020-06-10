@@ -110,7 +110,7 @@ export default {
         { name: 'Super B.F.G.', image: 'superbfg.jpg', items: ['Blast Frequency Gun', 'Amplifier'] },
         { name: 'Tesla Ball', image: 'teslaball.jpg', items: ['Battery', 'Bingo Ball Cage'] },
         { name: 'Spear Launcher', image: 'spearlauncher.jpg', items: ['Leaf Blower', 'Spear'] },
-        { name: 'Blitzkrieg', image: 'blitzkrieg.jpg', items: ['Merc Assault Rifle', 'Electric Chair'] },
+        { name: 'Blitzkrieg', image: 'blitzkrieg.jpg', items: ['Merc Assault Rifle', 'Wheelchair', 'Battery'] },
         { name: 'Blazing Aces', image: 'blazingaces.jpg', items: ['Tennis Racquet', 'Tiki Torch'] },
         { name: 'Exsanguinator', image: 'exsanguinator.jpg', items: ['Saw Blade', 'Vacuum Cleaner'] },
         { name: 'Plate Launcher', image: 'platelauncher.jpg', items: ['Cement Saw', 'Plates'] },
