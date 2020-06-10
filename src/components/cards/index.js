@@ -9,7 +9,6 @@ class Cards extends Component {
         this.onClickToggleCard = this.onClickToggleCard.bind(this);
     }
 
-
     filterCards() {
         return this.props.data.filter(card => card.items.some(item => this.props.selected.includes(item)));
     }
@@ -27,7 +26,6 @@ class Cards extends Component {
             );
         })
     }
-
 
     render() {
         const cardList = this.props.selected.length > 0 ? this.filterCards(this.props.data) : this.props.data;
