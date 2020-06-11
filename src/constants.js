@@ -75,7 +75,7 @@ export default {
         {name: "Auger", image: "comboc_auger_result.png", filteredImage: "comboc_auger_no_result.png", items: ["Drill Motor", "Pitchfork"]},
         {name: "Beer Hat", image: "comboc_beerhat_result.png", filteredImage: "comboc_beerhat_no_result.png", items: ["Construction Hat", "Beer"]},
         {name: "Blazing Aces", image: "comboc_blazingace_result.png", filteredImage: "comboc_blazingace_no_result.png", items: ["Tennis Racquet", "Tiki Torch"]},
-        {name: "Blitzkrieg", image: "comboc_blitzkrieg_result.png", filteredImage: "comboc_blitzkrieg_no_result.png", items: ["Merc Assault Rifle", "Wheelchair","Battery" ]},
+        {name: "Blitzkrieg", image: "comboc_blitzkrieg_result.png", filteredImage: "comboc_blitzkrieg_no_result.png", items: ["Merc Assault Rifle", "Electric Chair" ]},
         {name: "Boomstick", image: "comboc_boomstick_result.png", filteredImage: "comboc_boomstick_no_result.png", items: ["Pitchfork", "Shotgun"]},
         {name: "Burning Skull", image: "comboc_burningskull_result.png", filteredImage: "comboc_burningskull_no_result.png", items: ["Bull Skull", "Motor Oil"]},
         {name: "Defiler", image: "comboc_defiler_result.png", filteredImage: "comboc_defiler_no_result.png", items: ["Sledge Hammer", "Fire Axe"]},
