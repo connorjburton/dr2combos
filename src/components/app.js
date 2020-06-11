@@ -45,8 +45,6 @@ export default class App extends Component {
 		if(currentSelectedItems.length > 0) {
 			return currentSelectedItems.forEach(this.toggleItem);
 		}
-
-		// cardItems.forEach(this.toggleItem);
 		
 		const otherComboCards = this.state.config.combos.filter((combo) => combo.items.some(item => cardItems.includes(item) && !combo.items.every(item => cardItems.includes(item))));
 		const allRelevantComboItems = otherComboCards.reduce((cardItemsList, combo) => [...combo.items, ...cardItemsList], cardItems);
