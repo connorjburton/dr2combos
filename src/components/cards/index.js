@@ -1,7 +1,6 @@
 import { Component } from 'preact';
 
 class Cards extends Component {
-
     constructor(props) {
         super(props);
 
@@ -25,7 +24,7 @@ class Cards extends Component {
             const isSelected = this.props.selected.length > 0 ? card.isFiltered : true;
             return (
                 <div className={'image'} onClick={() => this.onClickToggleCard(card.items)}>
-                <div class="card-name">{card.name}</div>
+                <div class={`card-name ${this.props.selected.length > 0 && !card.isFiltered ? 'filtered-out' : ''}`}>{card.name}</div>
                     <div className="card-items">{card.items.map(item => (<div>{item}</div>))}</div>
                     <img src={`../../assets/cards/${isSelected ? card.image : card.filteredImage}`} title={card.name} />
                 </div>

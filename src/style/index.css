@@ -51,28 +51,36 @@ li {
 }
 
 .card-name {
-	bottom: 35%;
+	color: rgb(230, 207, 61);
+	bottom: 34.5%;
 	position: absolute;
-	transform: rotate(-8deg);
+	transform: rotate(-6.5deg);
 	text-align: center;
 	width: 100%;
 	font-weight: bold;
-	font-size: 28px;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+.card-name.filtered-out {
+	color: rgba(230, 207, 61, 0.75);
 }
 
 .card-items {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 }
 
 .card-items div {
-	background: #222;
-	border: solid 1px white;
+	background: black;
+	border: solid 2px white;
 	text-align: center;
-	padding: 5px 10px;
+	padding: 3px 20px;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .search {
