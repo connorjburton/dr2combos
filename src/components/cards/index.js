@@ -1,16 +1,44 @@
-const Cards = (props) => {
-    const items = props.selected.length > 0 ? props.data.filter(card => card.weapons.some(weapon => props.selected.includes(weapon))) : props.data; 
+import { Component } from 'preact';
 
-    return (
-        <main className={'cards'}>
-            <div className={'search'}>
-                <input type="text" placeholder="Search combo cards" />
-            </div>
-            <div className={'card-images'}>
-                {items.sort((a, b) => a.name < b.name ? -1 : 1).map(item => <div className={'image'}><img src={`../../assets/cards/${item.image}`} /></div>)}
-            </div>
-        </main>
-    );
+class Cards extends Component {
+    constructor(props) {
+        super(props);
+
+        this.renderCardImages = this.renderCardImages.bind(this);
+        this.onClickToggleCard = this.onClickToggleCard.bind(this);
+        this.filterCard = this.filterCard.bind(this);
+    }
+
+    filterCard(card) {
+        return card.items.some(item => this.props.selected.includes(item));
+    }
+
+    onClickToggleCard(cardItems) {
+        this.props.toggleCard(cardItems);
+    }
+
+    renderCardImages(cardList) {
+        return cardList.map(card => ({...card, isFiltered: this.filterCard(card)})).sort((a, b) => {
+            return a.isFiltered && !b.isFiltered ? -1 : !a.isFiltered && b.isFiltered ? 1 : a.name < b.name ? -1 : 1;
+        }).map(card => {
+            const isSelected = this.props.selected.length > 0 ? card.isFiltered : true;
+            return (
+                <div className={'image'} onClick={() => this.onClickToggleCard(card.items)}>
+                <div class={`card-name ${this.props.selected.length > 0 && !card.isFiltered ? 'filtered-out' : ''}`}>{card.name}</div>
+                    <div className="card-items">{card.items.map(item => (<div>{item}</div>))}</div>
+                    <img src={`../../assets/cards/${isSelected ? card.image : card.filteredImage}`} title={card.name} />
+                </div>
+            );
+        })
+    }
+
+    render() {
+        return (
+            <main className={'cards'}>
+                <div className={'card-images'}>{this.renderCardImages(this.props.data)}</div>
+            </main>
+        );
+    }
 }
 
 export default Cards;

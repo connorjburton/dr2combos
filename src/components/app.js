@@ -19,6 +19,12 @@ export default class App extends Component {
 		};
 
 		this.toggleItem = this.toggleItem.bind(this);
+		this.toggleItemsOnCard = this.toggleItemsOnCard.bind(this);
+		this.clearSelectedItems = this.clearSelectedItems.bind(this);
+	}
+
+	clearSelectedItems() {
+		this.setState({ selected: [] });
 	}
 
 	toggleItem(item) {
@@ -34,13 +40,33 @@ export default class App extends Component {
 		})
 	}
 
+	toggleItemsOnCard(cardItems) {
+		const currentSelectedItems = [...this.state.selected];
+		if(currentSelectedItems.length > 0) {
+			return currentSelectedItems.forEach(this.toggleItem);
+		}
+		
+		const otherComboCards = this.state.config.combos.filter((combo) => combo.items.some(item => cardItems.includes(item) && !combo.items.every(item => cardItems.includes(item))));
+		const allRelevantComboItems = otherComboCards.reduce((cardItemsList, combo) => [...combo.items, ...cardItemsList], cardItems);
+		allRelevantComboItems.filter((item, index, allItems) => allItems.indexOf(item) === index).forEach(this.toggleItem);
+	}
+
 	render() {
 		return (
-			<div id="app">
+			<div id="app" className="">
 				<Header />
 				<div className={'wrapper'}>
-					<Items data={this.state.config.items} toggle={this.toggleItem} selected={this.state.selected} />
-					<Cards data={this.state.config.combos} selected={this.state.selected} />
+					<Items 
+						data={this.state.config.items} 
+						toggle={this.toggleItem} 
+						clear={this.clearSelectedItems}
+						selected={this.state.selected} 
+					/>
+					<Cards 
+						data={this.state.config.combos}
+						toggleCard={this.toggleItemsOnCard}
+						selected={this.state.selected}
+						/>
 				</div>
 			</div>
 		);
