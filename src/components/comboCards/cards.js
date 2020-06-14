@@ -34,9 +34,9 @@ class Cards extends Component {
 
     render() {
         return (
-            <main className={'cards'}>
+            <div className={'cards'}>
                 <div className={'card-images'}>{this.renderCardImages(this.props.data)}</div>
-            </main>
+            </div>
         );
     }
 }

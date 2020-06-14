@@ -15,7 +15,7 @@ class Items extends Component {
     }
 
     filterItems(item) {
-        return item.toLowerCase().startsWith(this.state.filter);
+        return this.props.selected.includes(item) || item.toLowerCase().startsWith(this.state.filter);
     }
 
     sortItems(items) {
@@ -36,7 +36,7 @@ class Items extends Component {
 
 	render() {
 		return (
-            <aside className={'items'}>
+            <div className={'items'}>
                 <div className={'search'}>
                     <input type="text" placeholder="Search items" value={this.state.filter} onKeyUp={event => this.setState({ filter: event.target.value.toLowerCase() })} />
                     <button onClick={() => this.clearSelectedItems()}>Clear</button>
@@ -46,7 +46,7 @@ class Items extends Component {
                         {this.sortItems(this.props.data.filter(this.filterItems)).map(this.renderItem)}
                     </ul>
                 </div>
-            </aside>
+            </div>
         );
     }
 }

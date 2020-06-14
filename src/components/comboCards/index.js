@@ -1,12 +1,9 @@
-
-import 'preact/debug';
 import { Component } from 'preact';
-import Header from './header';
 
 // Code-splitting is automated for routes
-import ComboCards from './comboCards';
-import Map from './map';
-import constants from '../constants';
+import Cards from './cards.js';
+import Items from './items.js';
+import constants from '../../constants';
 
 export default class App extends Component {
 	constructor() {
@@ -54,18 +51,18 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div id="app">
-				<Header />
-					<Map />
-					<div className="overlay-wrapper">
-						<ComboCards 
-							data={this.state.config.items} 
-							toggle={this.toggleItem} 
-							toggleCard={this.toggleItemsOnCard}
-							clear={this.clearSelectedItems}
-							selected={this.state.selected} 
+				<div className={'comboCards-wrapper'}>
+					<Items 
+						data={this.state.config.items} 
+						toggle={this.toggleItem} 
+						clear={this.clearSelectedItems}
+						selected={this.state.selected} 
+					/>
+					<Cards 
+						data={this.state.config.combos}
+						toggleCard={this.toggleItemsOnCard}
+						selected={this.state.selected}
 						/>
-					</div>
 				</div>
 		);
 	}

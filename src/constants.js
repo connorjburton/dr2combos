@@ -1,4 +1,9 @@
 export default {
+    ZOOM_STEP: 1.0625,
+    ZOOM_DIRECTIONS: {
+        IN: 'zoomIn',
+        OUT: 'zoomOut',
+    },
     ITEMS: [
         '2x4',
         'Amplifier',
