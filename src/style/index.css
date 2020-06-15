@@ -4,6 +4,22 @@ html, body {
 	background: #202020;
 }
 
+@font-face {
+    font-family: 'willametterising';
+    src: url('./../assets/fonts/willamette-rising-webfont.woff2') format('woff2'),
+         url('./../assets/fonts/willamette-rising-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'evogriaregular';
+    src: url('./../assets/fonts/evogria.regular-webfont.woff2') format('woff2'),
+         url('./../assets/fonts/evogria.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -52,14 +68,16 @@ li {
 
 .card-name {
 	color: rgb(230, 207, 61);
-	bottom: 34.5%;
+	bottom: 33.25%;
 	position: absolute;
 	transform: rotate(-6.5deg);
 	text-align: center;
 	width: 100%;
 	font-weight: bold;
-	font-size: 32px;
+	font-size: 39px;
 	text-transform: uppercase;
+	font-family: 'evogriaregular', sans-serif;
+	letter-spacing: 0px;
 }
 
 .card-name.filtered-out {
