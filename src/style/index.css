@@ -26,6 +26,9 @@ html, body {
 
 #app {
 	height: 100%;
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .wrapper {
@@ -41,23 +44,22 @@ li {
 }
 
 .items {
-	flex-basis: 20%;
+	flex-basis: 15%;
 }
 
 .cards {
-	flex-basis: 80%;
+	flex-basis: 85%;
 }
 
 .card-images {
 	display: grid;
-	grid-template-columns: 348px 348px 348px 348px;
+	grid-template-columns: 1fr 1fr 1fr;
 	column-gap: 10px;
 	row-gap: 10px;
 }
 
 .card-images .image {
-	width: 348px;
-	height: 492px;
+	width: 100%;
 	position: relative;
 }
 
@@ -68,13 +70,13 @@ li {
 
 .card-name {
 	color: rgb(230, 207, 61);
-	bottom: 33.25%;
+	bottom: 33%;
 	position: absolute;
 	transform: rotate(-6.5deg);
 	text-align: center;
 	width: 100%;
 	font-weight: bold;
-	font-size: 39px;
+	font-size: 46px;
 	text-transform: uppercase;
 	font-family: 'evogriaregular', sans-serif;
 	letter-spacing: 0px;
