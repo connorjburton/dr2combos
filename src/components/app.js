@@ -54,7 +54,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<div className={'bg'}></div>
+				<div className={'bg'} />
 				<div id="app" className="">
 					<Header />
 					<div className={'wrapper'}>
