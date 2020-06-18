@@ -5,17 +5,13 @@
     font-family: "willametterising", sans-serif;
     background-clip: text;
     background-position: 50% 100%;
-    background-size: cover;
+    background-size: contain;
 }
 
 header {
     padding: 20px 0 40px;
     text-align: center;
-}
-
-footer {
-    padding: 20px 0 40px;
-    text-align: center;
+    position: relative;
 }
 
 h1 {

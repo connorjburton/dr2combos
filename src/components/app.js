@@ -71,8 +71,8 @@ export default class App extends Component {
 							selected={this.state.selected}
 							/>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
 			</Fragment>
 		);
 	}
