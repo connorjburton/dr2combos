@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, Fragment } from 'preact';
 
 import Header from './header';
 
@@ -53,22 +53,25 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div id="app" className="">
-				<Header />
-				<div className={'wrapper'}>
-					<Items 
-						data={this.state.config.items} 
-						toggle={this.toggleItem} 
-						clear={this.clearSelectedItems}
-						selected={this.state.selected} 
-					/>
-					<Cards 
-						data={this.state.config.combos}
-						toggleCard={this.toggleItemsOnCard}
-						selected={this.state.selected}
+			<Fragment>
+				<div className={'bg'}></div>
+				<div id="app" className="">
+					<Header />
+					<div className={'wrapper'}>
+						<Items 
+							data={this.state.config.items} 
+							toggle={this.toggleItem} 
+							clear={this.clearSelectedItems}
+							selected={this.state.selected} 
 						/>
+						<Cards 
+							data={this.state.config.combos}
+							toggleCard={this.toggleItemsOnCard}
+							selected={this.state.selected}
+							/>
+					</div>
 				</div>
-			</div>
+			</Fragment>
 		);
 	}
 }
