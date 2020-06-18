@@ -4,6 +4,11 @@ html, body {
 	background: #202020;
 }
 
+body {
+	background: url('./../assets/bg.jpg');
+	background-size: cover;
+}
+
 @font-face {
     font-family: 'willametterising';
     src: url('./../assets/fonts/willamette-rising-webfont.woff2') format('woff2'),
