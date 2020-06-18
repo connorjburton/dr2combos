@@ -13,6 +13,11 @@ header {
     text-align: center;
 }
 
+footer {
+    padding: 20px 0 40px;
+    text-align: center;
+}
+
 h1 {
     font-size: 100px;
 }
