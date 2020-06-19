@@ -29,6 +29,7 @@
     "sirv-cli": "^0.4.5"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "lodash.orderby": "^4.6.0",
     "preact": "^10.3.2",
     "preact-render-to-string": "^5.1.4",

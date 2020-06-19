@@ -51,8 +51,8 @@ li {
 	cursor: pointer;
 }
 
-.selected {
-	color: #55AA4D;
+.items .selected {
+	color: #21b3dc;
 }
 
 .items {
@@ -115,6 +115,10 @@ li {
 	font-weight: bold;
 	letter-spacing: -1px;
 	word-spacing: -1px;
+}
+
+.card-items .selected {
+	background: #21b3dc;
 }
 
 .search {
