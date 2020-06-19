@@ -82,6 +82,9 @@ li {
 	padding: 2.5px;
 	margin-bottom: 2px;
 }
+.results ul li span {
+	color: rgb(23, 95, 98);
+}
 
 .results ul li.selected {
 	background-color: rgb(168, 73, 36);
