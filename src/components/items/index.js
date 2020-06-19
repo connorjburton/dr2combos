@@ -25,7 +25,10 @@ class Items extends Component {
     renderItem(item) {
         const selected = this.props.selected.includes(item);
         return (
-            <li className={selected ? 'selected' : ''} onClick={() => this.props.toggle(item)}>{item} {selected ? '- Remove' : '+ Add'}</li>
+            <li className={selected ? 'selected' : ''} onClick={() => this.props.toggle(item)}>
+                <span>{item}</span>
+                <span className="item-action">{selected ? '' : '+'}</span>
+            </li>
         );
     }
 

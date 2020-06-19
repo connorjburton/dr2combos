@@ -76,14 +76,19 @@ li {
 
 .results ul li {
 	color: rgb(23, 95, 98);
+	display: flex;
+	justify-content: space-between;
 	font-weight: bold;
 	padding: 2.5px;
 	margin-bottom: 2px;
 }
 
 .results ul li.selected {
+	background-color: rgb(168, 73, 36);
+}
+
+.results ul li.selected span {
 	animation: selected-pulse 1.35s infinite;
-	background-color: rgb(168, 73, 36	);
 }
 
 @keyframes selected-pulse {
