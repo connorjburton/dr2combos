@@ -74,6 +74,11 @@ li {
 	/* border-image: url("./../assets/star-border.svg") 1234 14px 0 round; */
 }
 
+.results {
+	max-height: 95vh;
+	overflow-y: scroll;
+}
+
 .results ul li {
 	color: rgb(23, 95, 98);
 	display: flex;
@@ -84,6 +89,10 @@ li {
 }
 .results ul li span {
 	color: rgb(23, 95, 98);
+}
+
+.results ul li span:last-child {
+	margin-right: 5px;
 }
 
 .results ul li.selected {
