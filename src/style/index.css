@@ -142,6 +142,7 @@ li {
 .card-images .image img {
 	width: 100%;
 	height: 100%;
+	cursor: pointer;
 }
 
 .card-name {
@@ -159,7 +160,7 @@ li {
 }
 
 .card-name.filtered-out {
-	color: rgba(230, 207, 61, 0.75);
+	color: rgba(255, 255, 255, 0.75);
 }
 
 .card-items {
@@ -179,6 +180,10 @@ li {
 	font-weight: bold;
 	letter-spacing: -1px;
 	word-spacing: -1px;
+}
+
+.card-items .selected {
+	background: #21b3dc;
 }
 
 .search {
