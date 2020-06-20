@@ -77,6 +77,7 @@ li {
 .results {
 	max-height: 95vh;
 	overflow-y: scroll;
+	scrollbar-width: thin;
 }
 
 .results ul li {
@@ -101,20 +102,6 @@ li {
 
 .results ul li.selected span {
 	animation: selected-pulse 1.35s infinite;
-}
-
-@keyframes selected-pulse {
-	0% {
-		color: rgb(253, 250, 223);
-	}
-
-	50% {
-		color: rgb(249, 233, 54);
-	}
-
-	100% {
-		color: rgb(253, 250, 223);
-	}
 }
 
 .items-wrapper {
@@ -183,10 +170,26 @@ li {
 }
 
 .card-items .selected {
-	background: #21b3dc;
+	background-color: rgb(168, 73, 36);
+	animation: selected-pulse 1.35s infinite;
 }
 
 .search {
 	display: flex;
 	margin-bottom: 10px;
+}
+
+
+@keyframes selected-pulse {
+	0% {
+		color: rgb(253, 250, 223);
+	}
+
+	50% {
+		color: rgb(249, 233, 54);
+	}
+
+	100% {
+		color: rgb(253, 250, 223);
+	}
 }
