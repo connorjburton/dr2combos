@@ -62,6 +62,7 @@ export default class App extends Component {
 						/>
 						<Cards 
 							data={this.state.config.combos}
+							toggle={this.toggleItem}
 							toggleCard={this.toggleItemsOnCard}
 							selected={this.state.selected}
 							/>

@@ -96,11 +96,11 @@ li {
 	margin-right: 5px;
 }
 
-.results ul li.selected {
+.results ul li:hover, .results ul li.selected {
 	background-color: rgb(168, 73, 36);
 }
 
-.results ul li.selected span {
+.results ul li:hover span, .results ul li.selected span {
 	animation: selected-pulse 1.35s infinite;
 }
 
@@ -178,7 +178,11 @@ li {
 	word-spacing: -1px;
 }
 
-.card-items .selected {
+.card-items div:hover {
+	cursor: pointer;
+}
+
+.card-items div:hover, .card-items .selected {
 	background-color: rgb(168, 73, 36);
 	animation: selected-pulse 1.35s infinite;
 }
