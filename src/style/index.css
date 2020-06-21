@@ -152,6 +152,7 @@ li {
 	text-transform: uppercase;
 	font-family: 'evogriaregular', sans-serif;
 	letter-spacing: 0px;
+	pointer-events: none;
 }
 
 .card-name.filtered-out {
