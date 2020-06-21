@@ -1,6 +1,7 @@
 import { Component, Fragment } from 'preact';
 
 import Header from './header';
+import Footer from './footer';
 
 // Code-splitting is automated for routes
 import Cards from './cards';
@@ -70,6 +71,7 @@ export default class App extends Component {
 							selected={this.state.selected}
 							/>
 					</div>
+					<Footer />
 				</div>
 			</Fragment>
 		);

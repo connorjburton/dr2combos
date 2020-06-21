@@ -24,6 +24,15 @@ html, body {
 	box-sizing: border-box;
 }
 
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: rgb(23, 95, 98);
+	font-weight: bold;
+}
+
 .bg {
 	position: fixed;
 	top: 0;
@@ -36,7 +45,6 @@ html, body {
 }
 
 #app {
-	height: 100%;
 	max-width: 1080px;
 	width: 100%;
 	margin: 0 auto;
@@ -51,12 +59,55 @@ li {
 	cursor: pointer;
 }
 
-.items .selected {
-	color: #21b3dc;
-}
-
 .items {
 	flex-basis: 20%;
+	background: rgb(175,170,157);
+	padding: 10px;
+	margin-right: 10px;
+	border-top: 10px solid rgb(26, 106, 111);
+	border-bottom: 10px solid rgb(26, 106, 111);
+	color: rgb(23, 95, 98);
+
+	position: relative;
+	/* border-image: url('./../assets/star.svg');
+	border-image-repeat: repeat; */
+	/* border-image: url("./../assets/star-border.svg") 1234 14px 0 round; */
+}
+
+.results {
+	max-height: 95vh;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+}
+
+.results ul li {
+	color: rgb(23, 95, 98);
+	display: flex;
+	justify-content: space-between;
+	font-weight: bold;
+	padding: 2.5px;
+	margin-bottom: 2px;
+}
+.results ul li span {
+	color: rgb(23, 95, 98);
+}
+
+.results ul li span:last-child {
+	margin-right: 5px;
+}
+
+.results ul li.selected {
+	background-color: rgb(168, 73, 36);
+}
+
+.results ul li.selected span {
+	animation: selected-pulse 1.35s infinite;
+}
+
+.items-wrapper {
+	position: sticky;
+	padding-top:10px;
+	top: 0;
 }
 
 .cards {
@@ -119,9 +170,26 @@ li {
 }
 
 .card-items .selected {
-	background: #21b3dc;
+	background-color: rgb(168, 73, 36);
+	animation: selected-pulse 1.35s infinite;
 }
 
 .search {
+	display: flex;
 	margin-bottom: 10px;
+}
+
+
+@keyframes selected-pulse {
+	0% {
+		color: rgb(253, 250, 223);
+	}
+
+	50% {
+		color: rgb(249, 233, 54);
+	}
+
+	100% {
+		color: rgb(253, 250, 223);
+	}
 }

@@ -25,7 +25,10 @@ class Items extends Component {
     renderItem(item) {
         const selected = this.props.selected.includes(item);
         return (
-            <li className={selected ? 'selected' : ''} onClick={() => this.props.toggle(item)}>{item} {selected ? '- Remove' : '+ Add'}</li>
+            <li className={selected ? 'selected' : ''} onClick={() => this.props.toggle(item)}>
+                <span>{item}</span>
+                <span className="item-action">{selected ? '' : '+'}</span>
+            </li>
         );
     }
 
@@ -37,14 +40,16 @@ class Items extends Component {
 	render() {
 		return (
             <aside className={'items'}>
-                <div className={'search'}>
-                    <input type="text" placeholder="Search items" value={this.state.filter} onKeyUp={event => this.setState({ filter: event.target.value.toLowerCase() })} />
-                    <button onClick={() => this.clearSelectedItems()}>Clear</button>
-                </div>
-                <div className={'results'}>
-                    <ul>
-                        {this.sortItems(this.props.data.filter(this.filterItems)).map(this.renderItem)}
-                    </ul>
+                <div className={'items-wrapper'}>
+                    <div className={'search'}>
+                        <input type="text" placeholder="Search items" value={this.state.filter} onKeyUp={event => this.setState({ filter: event.target.value.toLowerCase() })} />
+                        <button onClick={() => this.clearSelectedItems()}>Clear</button>
+                    </div>
+                    <div className={'results'}>
+                        <ul>
+                            {this.sortItems(this.props.data.filter(this.filterItems)).map(this.renderItem)}
+                        </ul>
+                    </div>
                 </div>
             </aside>
         );
