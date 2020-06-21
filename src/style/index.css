@@ -96,11 +96,11 @@ li {
 	margin-right: 5px;
 }
 
-.results ul li.selected {
+.results ul li:hover, .results ul li.selected {
 	background-color: rgb(168, 73, 36);
 }
 
-.results ul li.selected span {
+.results ul li:hover span, .results ul li.selected span {
 	animation: selected-pulse 1.35s infinite;
 }
 
@@ -126,6 +126,14 @@ li {
 	position: relative;
 }
 
+.image { 
+	transition: transform 0.1s ease-in-out;
+}
+
+.image:hover {
+	transform: scale(1.02);
+}
+
 .card-images .image img {
 	width: 100%;
 	height: 100%;
@@ -144,6 +152,7 @@ li {
 	text-transform: uppercase;
 	font-family: 'evogriaregular', sans-serif;
 	letter-spacing: 0px;
+	pointer-events: none;
 }
 
 .card-name.filtered-out {
@@ -169,7 +178,11 @@ li {
 	word-spacing: -1px;
 }
 
-.card-items .selected {
+.card-items div:hover {
+	cursor: pointer;
+}
+
+.card-items div:hover, .card-items .selected {
 	background-color: rgb(168, 73, 36);
 	animation: selected-pulse 1.35s infinite;
 }
