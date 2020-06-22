@@ -18,7 +18,7 @@ h1 {
     font-size: 100px;
 }
 
-@media screen and (max-widtH: 800px) {
+@media screen and (max-width: 800px) {
     h1 {
         font-size: 62px;
     }
