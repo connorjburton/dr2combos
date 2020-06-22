@@ -25,7 +25,7 @@ class Cards extends Component {
             const isSelected = this.props.selected.length > 0 ? card.isFiltered : true;
             return (
                 <div className={'image'}>
-                <div class={`card-name ${this.props.selected.length > 0 && !card.isFiltered ? 'filtered-out' : ''}`}>{card.name}</div>
+                    <div class={classnames({ 'card-name': true, 'filtered-out': this.props.selected.length > 0 && !card.isFiltered, long: card.long })}>{card.name}</div>
                     <div className="card-items">{card.items.map(item => (<div onClick={() => this.props.toggle(item)} className={classnames({ selected: this.props.selected.includes(item) })}>{item}</div>))}</div>
                     <img src={`../../assets/cards/${isSelected ? card.image : card.filteredImage}`} title={card.name} onClick={() => this.onClickToggleCard(card.items)} />
                 </div>
