@@ -20,3 +20,8 @@ npm run test
 ```
 
 For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+
+## Credits
+
+Card & game assets &copy;CAPCOM CO., LTD..
+Willamette Rising Font &copy;TracerTong Fontworks
