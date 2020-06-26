@@ -18,7 +18,7 @@ jobs:
     - run: yarn
     - run: yarn lint
     - run: yarn test
-    - run: yarn build
+    - run: yarn build --no-inline-css
     - name: Archive production artifacts
       uses: actions/upload-artifact@v1
       with:

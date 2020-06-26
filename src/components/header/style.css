@@ -1,5 +1,5 @@
 .clipText {
-    background: url('./../../assets/clip.png');
+    background: url('/assets/clip.png');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "willametterising", sans-serif;
