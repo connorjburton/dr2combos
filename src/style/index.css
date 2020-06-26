@@ -6,16 +6,16 @@ html, body {
 
 @font-face {
     font-family: 'willametterising';
-    src: url('./../assets/fonts/willamette-rising-webfont.woff2') format('woff2'),
-         url('./../assets/fonts/willamette-rising-webfont.woff') format('woff');
+    src: url('/assets/fonts/willamette-rising-webfont.woff2') format('woff2'),
+         url('/assets/fonts/willamette-rising-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'evogriaregular';
-    src: url('./../assets/fonts/evogria.regular-webfont.woff2') format('woff2'),
-         url('./../assets/fonts/evogria.regular-webfont.woff') format('woff');
+    src: url('/assets/fonts/evogria.regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/evogria.regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -38,7 +38,7 @@ button {
 	top: 0;
 	left: 0;
 	z-index: 0;
-	background: url('./../assets/bg.jpg');
+	background: url('/assets/bg.jpg');
 	background-size: cover;
 	width: 100%;
 	height: 100%;
@@ -69,9 +69,9 @@ li {
 	color: rgb(23, 95, 98);
 
 	position: relative;
-	/* border-image: url('./../assets/star.svg');
+	/* border-image: url('/assets/star.svg');
 	border-image-repeat: repeat; */
-	/* border-image: url("./../assets/star-border.svg") 1234 14px 0 round; */
+	/* border-image: url("/assets/star-border.svg") 1234 14px 0 round; */
 }
 
 .results {
